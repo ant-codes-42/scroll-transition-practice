@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cheat Sheet</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Cheat Sheet</h1>
+    </header>
+
+    <main>
+        <section class="card-container">
+            <div class="card-box">
+                <div class="card-title"><h3>Multiple Shadows</h3></div>
+                <p>Use this code to style multiple shadows on an h1 header.
+                    The values can be manipulated to achieve different effects.
+                </p>
+                <div class="card-content">
+                    <pre class="language-css"><code>h1 {
+    text-shadow:
+        1px 1px 1px red,
+        2px 2px 1px red;
+}</code></pre>
+                </div>
+            </div>
+            <div class="card-box">
+                <div class="card-title"><h3>Media Queries with and logic</h3></div>
+                <p>Use the and operator to combine a media type and feature.</p>
+                <div class="card-content">
+                    <pre class="language-css"><code>@media screen and (min-width: 600px) and (orientation: landscape) {
+body {
+    color: blue;
+    }
+}</code></pre>
+                </div>
+            </div>
+            <div class="card-box">
+                <div class="card-title"><h3>Pseudo Classes</h3></div>
+                <p>Use pseudo classes to manipulate elements in a specific state. In this case, the first child p element
+                    in an article element.
+                </p>
+                <div class="card-content">
+                    <pre class="language-css"><code>article p:first-child {
+    font-size: 120%;
+    font-weight: bold;
+}</code></pre>
+                </div>
+            </div>
+            <div class="card-box">
+                <div class="card-title"><h3>Declare custom properties</h3></div>
+                <p>Declare custom properties in :root and reference them throughout your stylesheet!
+                    These are the colors used on this page!</p>
+                <div class="card-content">
+                    <pre class="language-css"><code>:root {
+    --primary-gray: #484444;
+    --secondary-gray: #AAAAAA;
+}</code></pre>
+                </div>
+            </div>
+            <div class="card-box">
+                <div class="card-title"><h3>Reference custom properties</h3></div>
+                <p>Once declared in root, call reference to your variable.</p>
+                <div class="card-content">
+                    <pre class="language-css"><code>.class {
+    color: var(--primary-gray);
+}</code></pre>
+                </div>
+            </div>
+            <div class="card-box">
+                <div class="card-title"><h3>Set a gradient background</h3></div>
+                <p>Use this code to set a linear gradient background.</p>
+                <div class="card-content">
+                    <pre class="language-css"><code>html {
+    background: linear-gradient(#484444, #AAAAAA);
+}</code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div><p>Copyright 2024 - Anthony Schwab</p></div>
+    </footer>
+
+</body>
+
+</html>
